@@ -6,8 +6,12 @@
     "react-scripts": "0.9.2"
   },
   "dependencies": {
+    "express": "^4.14.1",
+    "moment": "^2.17.1",
     "react": "^15.4.2",
-    "react-dom": "^15.4.2"
+    "react-dom": "^15.4.2",
+    "react-redux": "5.0.3",
+    "redux": "3.6.0"
   },
   "scripts": {
     "start": "react-scripts start",
@@ -15,15 +19,7 @@
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/almaz73/schedule.git"
-  },
   "author": "Almaz",
   "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/almaz73/schedule/issues"
-  },
-  "homepage": "https://github.com/almaz73/schedule#readme"
-  
+  "homepage": "http://fmap.ru/games/game/schedule"
 }

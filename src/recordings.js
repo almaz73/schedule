@@ -11,7 +11,7 @@ class Recordings extends Component {
           <span>
             {records.map(function(rec, index){
                 return (
-                  <div key={index} className = "recordings">
+                  <div key={index} className="recordings">
                     <div className="recordings_title">
                       <span>12:00 - 13:30</span>
                       <span className="editButtons">

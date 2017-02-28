@@ -8,11 +8,11 @@ class Calendar extends Component {
       days.push(i)
     }
     var hideDays=[];
-    for(var i=1; i<=6; i++){
-      hideDays.push(i)
+    for(var j=1; j<=6; j++){
+      hideDays.push(j)
     }
     return (
-      <div className = "leftDiv">
+      <div className="leftDiv">
         <h2>Январь</h2>
         {
           hideDays.map(function(hideDay, index){

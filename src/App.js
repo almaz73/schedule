@@ -1,10 +1,13 @@
 import React, { Component } from 'react';
+import {connect} from 'react-redux';
 import './App.css';
-import Calendar from './calendar'
-import Recordings from './recordings'
+import Calendar from './Calendar';
+import Recordings from './Recordings';
+
 
 class App extends Component {
   render() {
+    {console.log(" 000 this.meetings = ", this.props.meetings)      }
     return (
       // <div className="root">
       <table className="root">
@@ -13,7 +16,7 @@ class App extends Component {
             <td>
               <Calendar/>
             </td><td>
-              <Recordings/>
+              <Recordings />
             </td>
           </tr>
         </tbody>
@@ -22,4 +25,17 @@ class App extends Component {
   }
 }
 
-export default App;
+// export default App;
+export default connect(
+  state=>({
+    meetings:state.meetings
+  }),
+  dispatch=>({
+    onAdd: (val)=>{
+      dispatch({type:"ADD_TEXT", text:val})
+    },
+    onSearch: (val)=>{
+      dispatch({type:"ADD_SEARCH", text:val});
+    }
+  })
+)(App);
