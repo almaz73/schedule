@@ -1,25 +1,29 @@
 import React, { Component } from 'react';
+import moment from 'moment';
 
 class Recordings extends Component {
   render() {
-    var txt = "Встреча с веселыми ребятами";
-    var records = [1,2,3,4,5, 6,6,6,6,6];
     return(
       <div>
         <button className="addButton">Добавить встречу</button>
         <div className="rightDiv">
+          <h2>12 февраля </h2>
           <span>
-            {records.map(function(rec, index){
+            {this.props.meetings.map(function(rec, index){
+
+              var date1 = moment(rec.date).format('HH:mm')
+              var date2 = moment(rec.date).add('minutes', rec.minutes).format('HH:mm')
+
                 return (
                   <div key={index} className="recordings">
                     <div className="recordings_title">
-                      <span>12:00 - 13:30</span>
+                      <span>{date1} - {date2}</span>
                       <span className="editButtons">
                       <button>редактировать</button>
                       <button>удалить</button>
                       </span>
                     </div>
-                    {txt}
+                    {rec.content}
                   </div>
                 )
               })

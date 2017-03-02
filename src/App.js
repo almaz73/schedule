@@ -7,16 +7,15 @@ import Recordings from './Recordings';
 
 class App extends Component {
   render() {
-    {console.log(" 000 this.meetings = ", this.props.meetings)      }
     return (
       // <div className="root">
       <table className="root">
         <tbody>
           <tr>
             <td>
-              <Calendar/>
+              <Calendar />
             </td><td>
-              <Recordings />
+              <Recordings meetings={this.props.meetings}/>
             </td>
           </tr>
         </tbody>
@@ -31,11 +30,8 @@ export default connect(
     meetings:state.meetings
   }),
   dispatch=>({
-    onAdd: (val)=>{
-      dispatch({type:"ADD_TEXT", text:val})
-    },
-    onSearch: (val)=>{
-      dispatch({type:"ADD_SEARCH", text:val});
-    }
+    // onAdd: (val)=>{
+    //   dispatch({type:"ADD_TEXT", text:val})
+    // }
   })
 )(App);

@@ -8,7 +8,7 @@ import reducers from './reducers';
 
 const store = createStore(reducers);
 store.subscribe(function(){
-//	console.log(" === ", store.getState());
+	// console.log(" ===state=== ", store.getState());
 });
 
 // store.dispatch({type:"ADD_TEXT", text:"aass===22"});
